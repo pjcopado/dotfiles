@@ -49,3 +49,6 @@
 
 [pull]
   rebase = false
+[user]
+	email = pjcopado@gmail.com
+	name = Patricio Copado
