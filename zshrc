@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search pyenv)
+plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search pyenv ssh-agent)
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -66,3 +66,17 @@ export LC_ALL=en_US.UTF-8
 
 export BUNDLER_EDITOR=code
 export EDITOR=code
+
+
+#RPROMPT='[%D{%L:%M:%S}] '$RPROMPT # time
+#RPROMPT="[%D{%f/%m/%y} | %D{%L:%M:%S}]" # date & time
+#PROMPT='%{$fg[yellow]%}[%D{%f/%m/%y} %D{%L:%M:%S}] '$PROMPT
+#PROMPT='%{$fg[yellow]%}[%*] '$PROMPT #left
+RPROMPT='%{$fg[yellow]%}[%*] %{$fg[white]%}'$RPROMPT #right
+
+export PYTHONPATH="/home/pjcopado/code/pjcopado/data-challenges/04-Decision-Science:$PYTHONPATH"
+
+
+alias open='explorer.exe'
+alias jnb='jupyter notebook'
+alias jlab='jupyter lab'
