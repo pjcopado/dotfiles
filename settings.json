@@ -2,11 +2,15 @@
     "[python]": {
         "editor.bracketPairColorization.enabled": false,
         "editor.guides.bracketPairs": false,
-        "editor.tabSize": 4
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnType": true
+    },
+    "[javascript]": {
+        "editor.tabSize": 2
     },
     "editor.bracketPairColorization.enabled": true,
     "editor.detectIndentation": false,
-    "editor.fontSize": 14,
     "editor.guides.bracketPairs": true,
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
@@ -17,7 +21,6 @@
     ],
     "editor.showFoldingControls": "always",
     "editor.snippetSuggestions": "top",
-    "editor.tabSize": 2,
     "emmet.includeLanguages": {
         "erb": "html"
     },
@@ -25,17 +28,17 @@
     "emmet.triggerExpansionOnTab": true,
     "explorer.confirmDelete": false,
     "files.exclude": {
-        "__pycache__": true,
-        "_site": true,
+        "**/.DS_Store": true,
+        "**/.egg-info": true,
+        "**/.git": true,
         ".asset-cache": true,
         ".bundle": true,
         ".ipynb_checkpoints": true,
         ".pytest_cache": true,
         ".sass-cache": true,
         ".svn": true,
-        "**/.DS_Store": true,
-        "**/.egg-info": true,
-        "**/.git": true,
+        "**/__pycache__": true,
+        "_site": true,
         "build": true,
         "coverage": true,
         "dist": true,
@@ -56,32 +59,58 @@
         "**/tmp/**": true,
         "**/vendor/**": true
     },
-    "git.enabled": false,
-    "notebook.diff.ignoreMetadata": true,
-    "notebook.lineNumbers": "on",
-    "notebook.markup.fontSize": 13,
+    "git.enabled": true,
     "python.defaultInterpreterPath": "~/.pyenv/shims/python",
-    "python.formatting.provider": "yapf",
-    "python.languageServer": "Pylance",
-    "python.linting.enabled": false,
-    "python.linting.flake8Enabled": false,
-    "python.linting.pylintEnabled": false,
+    "python.formatting.provider": "black",
     "python.terminal.activateEnvironment": false,
     "ruby.lint": {
         "rubocop": true
     },
-    "search.exclude": {
-      // Inherits all glob patterns from the `files.exclude` setting.
-      "**/.venv": true
-    },
     "telemetry.telemetryLevel": "off",
     "window.restoreWindows": "none",
-    "window.newWindowDimensions": "maximized",
-    "workbench.editor.enablePreview": true,
-    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.iconTheme": "catppuccin-mocha",
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.panel.defaultLocation": "right",
+    "editor.inlineSuggest.enabled": true,
+    "editor.formatOnSave": true,
+    "explorer.confirmDragAndDrop": false,
+    "chatgpt.lang": "en",
+    "explorer.compactFolders": false,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "notebook.lineNumbers": "on",
+    "jupyter.askForKernelRestart": false,
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
+    "editor.fontSize": 12,
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "remote.SSH.configFile": "/Users/pjcopado/.ssh/config",
+    "markdown-preview-enhanced.previewTheme": "monokai.css",
+    "markdown-preview-enhanced.codeBlockTheme": "auto.css",
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.db": "sqlite3-editor.editor"
+    },
+    "workbench.colorTheme": "Kanagawa",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
 }
